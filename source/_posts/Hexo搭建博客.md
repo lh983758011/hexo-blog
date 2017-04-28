@@ -99,12 +99,12 @@ themes:indigo
 
 ### 依赖
 
-> less
+> less 主题默认使用less作为css预处理工具
 ```	
 $ npm install hexo-renderer-less --save
 ```
 
-> feed 
+> feed 生成RSS
 ```
 $ npm install hexo-generator-feed --save
 ```
@@ -222,10 +222,41 @@ hexo deploy
 ## 评论功能
 
 常见的有：
-> * 多说：<http://duoshuo.com/>
+> * 多说：<http://duoshuo.com/>，要关闭了，慎入！
 > * Disqus：<https://disqus.com/>，国外网站优选
-> * 畅言：<http://changyan.kuaizhan.com/> ，搜狐
-> * 友言：<http://www.uyan.cc/>
+> * 畅言：<http://changyan.kuaizhan.com/> ，搜狐（需要备案，要有自己的主机）
+> * 友言：<http://www.uyan.cc/> 小，不稳定
+> * 网易云跟帖：<https://gentie.163.com/index.html>， 网易，稳定，集成方便
+
+### 网易云跟帖集成步骤（适用于Indigo主题）
+
+每个页面的布局其实在_partial/post.ejs 中，comment 评论就是其中一部分。
+
+* 在主题根目录下的_onfig.yml 中 添加
+```
+wangyi: true
+```
+* 在_partial/plugins添加wangyi.ejs文件，复制网易云跟帖web代码
+```
+<% if (theme.wangyi){ %>
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+	var cloudTieConfig = {
+	  url: document.location.href, 
+	  sourceId: "",
+	  productKey: "715e7508ff6c4889ae209a2acbf24b9d",
+	  target: "cloud-tie-wrapper"
+	};
+	var yunManualLoad = true;
+	Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+<% } %>
+```
+* 在_partial/post/comment.ejs 中添加
+```
+<%- partial('../plugins/wangyi') %>
+```
 	
 ## 流量统计
 

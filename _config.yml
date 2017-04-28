@@ -7,12 +7,12 @@ title: Luo的博客
 subtitle: Get it!
 description:
 author: Luo
-language:
+language: zh_CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://lh983758011.github.io
+url: http://iyangyao.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
