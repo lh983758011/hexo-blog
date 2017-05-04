@@ -14,6 +14,7 @@ React Native基础学习之路
 
 1. [江清清React Native专题](http://www.lcode.org/react-native/)
 2. [仿京东](http://blog.csdn.net/yuanguozhengjust/article/details/50538651)
+3. [Facebook React Native官网](https://facebook.github.io/react-native/docs/)
 
 # 组件学习
 
