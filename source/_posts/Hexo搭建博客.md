@@ -322,3 +322,9 @@ nginx -s reload
 	
 ## Markdown 语法
 [Markdown语法](https://www.zybuluo.com/mdeditor)
+
+# 问题记录
+
+1. localhost:4000 访问不了本地博客？
+原因：端口被占用了，一般是安装了福晰阅读器。
+解决办法：在启动是 用 Hexo s -p 5000, 将端口号换为5000

@@ -12,7 +12,7 @@ categories: [React Native]
 
 # 构建工程
 
-* Realm官网地址：<https://realm.io/ >
+* Realm官网地址：https://realm.io/ 
 
 * Realm 安装
  ```sh
