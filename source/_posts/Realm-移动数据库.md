@@ -2,8 +2,8 @@
 title: Realm 移动数据库
 date: 2017-05-16 09:00:30
 tags:
-- Realm
-categories: [Android]
+- Android
+categories: [Realm]
 ---
 
 Realm 移动数据库

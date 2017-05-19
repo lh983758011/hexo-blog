@@ -4,7 +4,8 @@ date: 2017-05-05 14:36:41
 tags:
 - 数据库
 - React Native 
-categories: [React Native]
+- Android
+categories: [Realm]
 ---
 移动端数据库Realm
 
