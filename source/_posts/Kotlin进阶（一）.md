@@ -39,3 +39,17 @@ fun isOdd(x : Int) = x % 2 != 0
 println(numbers.filter(::isOdd))
 ```
 ::isOdd是函数类型 (Int) -> Boolean的值。
+
+# 异步请求
+
+与Java的AsyncTask类似，但是AsyncTask会遇到当运行到postExecute()时，Activity被销毁了，就会崩溃。
+在Kotlin中，使用**async()**函数，进行异步操作，如下
+```Kotlin
+async(){
+	request(); //耗时操作
+	uiThread{ //更新UI};
+}
+```
+注意：**uiThread**切换到主线程。uiThread是依赖于调用者，Activity被销毁时，uiThread不会调用。
+
+**async**会返回一个**Future**，如果要用到**Future**可以使用**asyncResult**
